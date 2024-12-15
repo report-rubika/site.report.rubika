@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه اصلی</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .option {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>خوش آمدید</h1>
+    <div class="option">
+        <button onclick="openPage('page1')">گزینه ۱</button>
+    </div>
+    <div class="option">
+        <button onclick="openPage('page2')">گزینه ۲</button>
+    </div>
+    <div class="option">
+        <button onclick="openPage('page3')">گزینه ۳</button>
+    </div>
+
+    <script>
+        function openPage(page) {
+            document.body.innerHTML = 
+                <h1>${page}</h1>
+                <input type="text" id="inputField" placeholder="کلمه یا عدد را وارد کنید">
+                <button onclick="processInput()">اینتر</button>
+            ;
+        }
+
+        function processInput() {
+            document.body.innerHTML = 
+                <h1>در حال پردازش...</h1>
+            ;
+        }
+    </script>
+</body>
+</html>
